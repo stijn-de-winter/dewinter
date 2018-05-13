@@ -3,7 +3,8 @@ import { Selector } from 'testcafe';
 // A fixture must be created for each group of tests.
 fixture(`Index page`)
     // Load the URL your development server runs on.
-    .page('http://localhost:8080');
+    .page('http://localhost:8080')
+    .beforeEach(t => t.resizeWindow(1920, 1080));
 
 // Create a new test(description, function(testController): <Promise>)
 test('Hero body contains the title "Hero title"', async testController => {
