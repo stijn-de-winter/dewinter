@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "testcafe all tests/*.test.js --app \"npm run serve\" --app-init-delay 10000 -S -s screenshots",
-    "ci_test": "testcafe all tests/*.test.js --app \"npm run serve\" --app-init-delay 10000 -S -s /tmp/test-results/screenshots -r xunit:/tmp/test-results/res.xml"
+    "test": "testcafe all tests/*.test.js --app \"yarn serve\" --app-init-delay 10000 -S -s screenshots",
+    "ci_test": "testcafe all tests/*.test.js --app \"yarn serve\" --app-init-delay 10000 -S -s /tmp/test-results/screenshots -r xunit:/tmp/test-results/res.xml"
   },
   "dependencies": {
     "bulma": "^0.7.1",
