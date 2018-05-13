@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "testcafe all tests/*.test.js --app \"npm run serve\" --app-init-delay 10000 -S -s screenshots"
+    "test": "testcafe all tests/*.test.js --app \"npm run serve\" --app-init-delay 10000 -S -s screenshots",
+    "ci-test": "testcafe all tests/*.test.js --app \"npm run serve\" --app-init-delay 10000 -S -s screenshots -r xunit:/tmp/test-results/res.xml"
   },
   "dependencies": {
     "bulma": "^0.7.1",
@@ -17,6 +18,7 @@
     "@vue/cli-plugin-eslint": "^3.0.0-beta.10",
     "@vue/cli-service": "^3.0.0-beta.10",
     "testcafe": "^0.19.2",
+    "testcafe-reporter-xunit": "^2.1.0",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
