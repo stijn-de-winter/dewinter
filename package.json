@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "testcafe all tests/*.test.js --app \"yarn serve\" --app-init-delay 10000 -S -s screenshots",
-    "ci_test": "testcafe chrome:headless tests/**/*.test.js -r xunit:/tmp/test-results/res.xml"
+    "ci_test": "yarn serve && testcafe chrome:headless tests/**/*.test.js -r xunit:/tmp/test-results/res.xml"
   },
   "dependencies": {
     "bulma": "^0.7.1",
